@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
+import java.awt.Dimension;
 
 
 public class GuessingGame extends JFrame {
@@ -54,7 +55,7 @@ public class GuessingGame extends JFrame {
 		getContentPane().add(lblGuessingGame);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(6, 53, 444, 70);
+		panel.setBounds(18, 60, 401, 55);
 		getContentPane().add(panel);
 		panel.setLayout(null);
 		
@@ -66,10 +67,11 @@ public class GuessingGame extends JFrame {
 		txtGuess = new JTextField();
 		txtGuess.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				GenerateRandomNumber();
+				checkGuess();
 			}
 		});
-		txtGuess.setBounds(308, 21, 101, 32);
+	
+		txtGuess.setBounds(283, 15, 101, 32);
 		panel.add(txtGuess);
 		txtGuess.setColumns(10);
 		
@@ -95,8 +97,9 @@ public class GuessingGame extends JFrame {
 		
 		GuessingGame thegame = new GuessingGame();
 		thegame.GenerateRandomNumber();
-		thegame.setSize(430, 330);
+		thegame.setSize(new Dimension(430, 330));
 		thegame.setVisible(true);
 
 	}
+	
 }
