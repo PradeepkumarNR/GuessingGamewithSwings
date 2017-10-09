@@ -88,6 +88,8 @@ public class GuessingGame extends JFrame {
 		getContentPane().add(lblOutput);
 	}
 
+	
+	
 	public static void main(String[] args) {
 		
 		GuessingGame thegame = new GuessingGame();
